@@ -1,0 +1,7 @@
+PRODUCT_ID := t24000
+CLASS_ID:=iptime
+CPU_TYPE:=mv6281
+LANG_PACKS:=kr,en
+KCONFIG_FILE_NAME:=.config.mvrouter
+KERNEL_FILENAME:=uImage
+KERNEL_PATH:=../../linux

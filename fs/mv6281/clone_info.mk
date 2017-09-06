@@ -1,0 +1,1 @@
+clones/t24000/clone_info.mk

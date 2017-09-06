@@ -1,0 +1,37 @@
+PROJECT_ID := mv6281
+BOOTLOADER_DIR := u-boot-3.5.9-mvrouter
+USE_LOCAL_BUSYBOX:=y
+#BUSYBOX_DIR:=busybox-1.8.2
+BUSYBOX_DIR:=busybox-1.13
+REAL_KERNEL_PATH:=../linux-2.6.21.x
+
+IPTABLES_DIR:=iptables-1.3.8
+IPTABLES_PATH := $(USERAPPS_ROOT)/$(IPTABLES_DIR)
+
+USE_MV6281:=y
+
+include $(USERAPPS_ROOT)/configs/mv6281/menu_wire_router_efm
+include $(USERAPPS_ROOT)/configs/mv6281/common_config
+include $(USERAPPS_ROOT)/configs/mv6281/apps_config
+-include $(USERAPPS_ROOT)/lang_config
+
+CPU_ID:=mv6281
+IF_WAN:=\"eth1\"
+IF_LAN:=\"eth0\"
+IF_LAN_PHY:=\"eth0\"
+IF_LOCAL:=\"br0\"
+IF_WIRELESS:=\"eth0\"
+
+
+# dummy
+IF_WAN2:=\"eth3\"
+
+ifeq ($(KOREAN_SUPPORT),y)
+USE_ISPFAKE:=y
+endif
+
+USE_BRIDGE:=y
+USE_SAVE_INFO:=y
+
+-include $(USERAPPS_ROOT)/misc_config
+
