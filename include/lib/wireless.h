@@ -1339,6 +1339,10 @@ int wireless_api_restart(char *ifname);
 int check_wireless_ifstatus(int wl_mode);
 int check_wireless_ifrun(int wl_mode);
 
+int wireless_api_get_prev_channel(char *ifname,wl_channel_t *channel);
+int wireless_api_set_prev_channel(char *ifname,wl_channel_t *channel);
+
+
 
 
 #endif

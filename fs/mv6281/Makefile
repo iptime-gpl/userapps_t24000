@@ -4,7 +4,7 @@ TARGET:=t24000
 $(shell ln -sf clones/$(TARGET)/clone_info.mk clone_info.mk)
 $(shell echo "$(TARGET)" > $(USERAPPS_ROOT)/.product_name)
 
-all: compile_all image
+all: kernel compile_all image
 
 include $(USERAPPS_ROOT)/mkdefs
 include $(USERAPPS_ROOT)/rules.mk

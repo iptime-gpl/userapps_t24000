@@ -718,7 +718,7 @@ extern int restore_backup_config( char *file );
 extern int base64_decode(void *dst, char *src, int maxlen);
 extern void base64_encode(unsigned char *from, char *to, int len);
 extern int Base64encode(char *encoded, const char *string, int len);
-extern int Base64decode(char *bufplain, const char *bufcoded);
+extern int Base64decode(char *bufplain, unsigned int length, const char *bufcoded);
 extern int file_exists(char *filename);
 extern int set_nologin_page(int flag);
 extern int get_nologin_page(void);
@@ -2927,6 +2927,7 @@ int is_support_fan();
 int qca_get_connected_apinfo(char *ifname,ap_info_t *ap_info);
 #endif
 
+int merge_hostinfo_lease(hostinfo_t *hinfo, int hcount, int hmax, dhcpd_lease_info_t *lease_arr, int lcount);
 
 #endif
 

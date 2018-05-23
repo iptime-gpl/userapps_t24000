@@ -177,7 +177,7 @@ endif
 
 	#Squash File System
 	@rm -f $(RAMDISK)
-	@./mksquashfs $(ROOT_DIR) $(RAMDISK)
+	@./mksquashfs $(ROOT_DIR) $(RAMDISK) -all-root
 #	rm -rf $(LINUX_KERNEL_DIR)/usr/.initramfs_data.cpio.gz.d
 #	rm -rf $(LINUX_KERNEL_DIR)/usr/initramfs_data.cpio.gz
 #	rm -rf $(LINUX_KERNEL_DIR)/usr/initramfs_data.o
@@ -187,7 +187,7 @@ endif
 #	make -C $(LINUX_KERNEL_DIR) modules_install
 
 
-FIRMWARE_FILENAME:=t24000_ml_10_008.bin
+FIRMWARE_FILENAME:=t24000_ml_10_015.bin
 
 FIRMWARE_TYPE:=kernel
 
